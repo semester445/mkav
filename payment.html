@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Касса - МКАВ</title>
+    <link rel="stylesheet" href="paystyles.css">
+</head>
+<body>
+
+     <header>
+        <div class="top-bar">
+            <div class="logo"><a href="index.html"><img src="logo.PNG" alt="МКАВ" width="150" height="60"></a></div>
+            <nav>
+                <ul>
+                    <li><a href="aboutus.html">О музее</a></li>
+                    <li><a href="expositions.html">Выставки</a></li>
+                    <li><a href="excursions.html">Экскурсии</a></li>
+                    <li><a href="payment.html">Онлайн касса</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Онлайн касса</h2>
+            <p>Для заказа билетов заполните обратную форму</p>
+
+            <form id="ticket-form">
+                <div class="form-grid">
+                    <div class="form-column">
+                        <label for="event">Мероприятие:</label>
+                        <select id="event" name="event" required>
+                            <option value="">Выберите мероприятие</option>
+                            <option value="китай 20.06">Культура Китая 20.06-18:00</option>
+                            <option value="создание китая 21.06">Создание Китайской Народной Республики 21.06-17:30</option>
+                            <option value="корея 22.06">Культура Кореи 22.06-17:30</option>
+                            <option value="три кореи 22.06">Три корейских государства 22.06-19:30</option>
+                            <option value="монголия 23.06">Культура Монголии 23.06-18:00</option>
+                            <option value="расцвет монголия 23.06">Расцвет Монгольской империи 23.06-19:30</option>
+                            <option value="япония 24.06">Культура Японии 24.06-19:00</option>
+                            <option value="кабуки 23.06">История Театра кабуки 24.06-20:30</option>
+                        </select>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="ticket_count">Количество билетов:</label>
+                        <input type="number" id="ticket_count" name="ticket_count" required>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="payment_method">Форма оплаты:</label>
+                        <div class="payment-options">
+                            <input type="radio" id="online" name="payment_method" value="онлайн" required>
+                            <label for="online">Онлайн</label>
+
+                            <input type="radio" id="in_person" name="payment_method" value="в кассе" required>
+                            <label for="in_person">В кассе</label>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="comment">Комментарий:</label>
+                        <textarea id="comment" name="comment" rows="4"></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="submit-button">Отправить</button>
+            </form>
+
+            <p class="confirmation-text">При успешной отправке формы дождитесь ответного письма</p>
+        </section>
+    </main>
+
+  <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>О музее</h4>
+                <ul>
+                    <li><a href="expositions.html">Выставки</a></li>
+                    <li><a href="excursions.html">Экскурсии</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Культуры</h4>
+                <ul>
+                    <li><a href="china.html">Китай</a></li>
+                    <li><a href="korea.html">Корея</a></li>
+                    <li><a href="japan.html">Япония</a></li>
+                    <li><a href="mongolia.html">Монголия</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Контакты</h4>
+                <p>8-999-676-38-42</p>
+                <p>Хлебозавод, М9</p>
+                <p>ул. Новодмитровская 1с23</p>
+            </div>
+
+            <div class="footer-column lanterns">
+                <img src="lamps.jpg" alt="Китайские фонарики">
+            </div>
+        </div>
+    </footer>
+
+<script>
+  document.getElementById('ticket-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); 
+
+    const eventValue = document.getElementById('event').value;
+    const ticketCount = document.getElementById('ticket_count').value;
+    const paymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
+    const email = document.getElementById('email').value;
+    const comment = document.getElementById('comment').value;
+
+    const message = `<b>Заказ билетов</b>\n` +
+                    `Мероприятие: ${eventValue}\n` +
+                    `Количество билетов: ${ticketCount}\n` +
+                    `Форма оплаты: ${paymentMethod}\n` +
+                    `Email: ${email}\n` +
+                    `Комментарий: ${comment}`;
+
+    const telegramBotToken = '7779216477:AAGclqtUmY7P2VJvxYxBynn8ES76DcYobhA'; 
+    const telegramChatId = '-4632602453'; 
+
+    const apiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: telegramChatId,
+          text: message,
+          parse_mode: 'HTML'
+        })
+      });
+
+      if (response.ok) {
+        alert('Форма успешно отправлена!');
+      } else {
+        throw new Error(`Ошибка отправки: ${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      console.error('Ошибка:', error);
+      alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+    }
+  });
+</script>
+</body>
+</html>

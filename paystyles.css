@@ -1,0 +1,190 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #C82333; /* Red color from the image */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between navigation links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden; /* Prevents the image from overflowing */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%; /* Take up the full height */
+    object-fit: cover; /*  Keeps the image's aspect ratio and covers the area */
+    display: block; /* Remove extra space below image */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.form-section {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-section p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.form-column {
+    margin-bottom: 20px;
+}
+
+.form-column label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-column input[type="number"],
+.form-column input[type="email"],
+.form-column select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-column textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.payment-options label {
+    margin: 0;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    background-color: #D32F2F;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+.confirmation-text {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px; /* Space between columns */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    text-align: left; /* Align text to the left */
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Makes the link fill the list item */
+    margin-bottom: 5px;
+}
+
+.footer-column p {
+    margin-bottom: 5px;
+}
+
+.footer-column.lanterns img {
+    width: 100%;
+    display: block;
+}

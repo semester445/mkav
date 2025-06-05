@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f8f8; /* Slightly off-white background */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #D32F2F; /* Darker Red */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.exhibitions {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center align for heading and text */
+}
+
+.exhibitions h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.exhibitions p {
+    margin-bottom: 20px;
+}
+
+.exhibition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Spacing between items */
+}
+
+.exhibition-item {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* For absolute positioning of the label */
+}
+
+.exhibition-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.exhibition-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column.contact p {
+    margin-bottom: 5px;
+}
+
+.footer-column.lanterns img {
+    width: 100%;
+    display: block;
+}

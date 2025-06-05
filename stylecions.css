@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f8f8; /* Slightly off-white */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #D32F2F; /* Darker Red */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.tours {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center the heading and text */
+}
+
+.tours h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.tours p {
+    margin-bottom: 20px;
+}
+
+.tour-grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Spacing between tour items */
+}
+
+.tour-item {
+    display: flex;  /* Layout image and description side-by-side */
+    align-items: flex-start; /* Align items to the top */
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow from rounded corners */
+}
+
+.tour-item img {
+    width: 300px; /* Fixed width for the image */
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.tour-description {
+    padding: 20px;
+    text-align: left; /* Align text to the left within the description */
+}
+
+.tour-description h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.tour-description p {
+    margin-bottom: 20px;
+    line-height: 1.5; /* Improve readability */
+}
+
+.signup-button {
+    background-color: #D32F2F; /* Darker Red */
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Smaller button */
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none;  /* Remove underline from the link */
+    display: inline-block; /* Make it behave like a block element but stay in line */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column.contact p {
+    margin-bottom: 5px;
+}
+
+.footer-column.lanterns img {
+    width: 100%;
+    display: block;
+}
