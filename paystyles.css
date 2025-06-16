@@ -5,9 +5,11 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+
+
+
 header {
-    background-color: #C82333; /* Red color from the image */
+    background-color: #C82333; 
     color: #fff;
     padding: 10px 0;
 }
@@ -30,7 +32,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Space between navigation links */
+    gap: 20px; 
 }
 
 nav a {
@@ -40,18 +42,21 @@ nav a {
 
 .hero-image {
     width: 100%;
-    height: 400px; /* Adjust as needed */
-    overflow: hidden; /* Prevents the image from overflowing */
+    height: 400px; 
+    overflow: hidden; 
 }
 
 .hero-image img {
     width: 100%;
-    height: 100%; /* Take up the full height */
-    object-fit: cover; /*  Keeps the image's aspect ratio and covers the area */
-    display: block; /* Remove extra space below image */
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
 }
 
-/* Main Content Styles */
+
+
+
+
 main {
     padding: 20px;
 }
@@ -79,7 +84,7 @@ main {
 
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
 }
 
@@ -111,7 +116,7 @@ main {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1em;
-    resize: vertical; /* Allow vertical resizing only */
+    resize: vertical; 
 }
 
 .payment-options {
@@ -143,7 +148,9 @@ button[type="submit"] {
     color: #777;
 }
 
-/* Footer Styles */
+
+
+
 footer {
     background-color: #000;
     color: #fff;
@@ -152,14 +159,14 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .footer-column {
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 .footer-column h4 {
@@ -176,7 +183,7 @@ footer {
 .footer-column li a {
     color: #fff;
     text-decoration: none;
-    display: block; /* Makes the link fill the list item */
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -187,4 +194,13 @@ footer {
 .footer-column.lanterns img {
     width: 100%;
     display: block;
+}
+
+.price-list {
+  width: 100%;
+  max-width: 800px; 
+  margin-top: 20px; 
+  display: block; 
+  margin-left: auto;
+  margin-right: auto; 
 }
